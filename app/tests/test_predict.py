@@ -1,6 +1,6 @@
 # test_predict.py
 from fastapi.testclient import TestClient
-from main import app  # your FastAPI instance
+from app.main import app  # your FastAPI instance
 
 client = TestClient(app)
 
