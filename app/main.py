@@ -10,5 +10,4 @@ def root():
     return {"message": "Prediction API"}
 
 
-
-# ....app$ uvicorn main:app --reload
+# ......app$ uvicorn main:app --reload
