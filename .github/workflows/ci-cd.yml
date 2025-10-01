@@ -24,9 +24,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install pytest
+      working-directory: ./app  # run inside app/
 
     - name: Run tests
       run: pytest tests --maxfail=1 --disable-warnings -q
+      working-directory: ./app  # run inside app/
 
     # --- Docker build steps (commented for future reference) ---
     # - name: Build Docker image
