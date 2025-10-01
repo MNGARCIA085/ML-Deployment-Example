@@ -5,17 +5,22 @@ import pandas as pd
 import json
 from app.schemas import CancerInput
 import tensorflow as tf
+from app.config import MODEL_PATH, SCALER_PATH, FEATURES_PATH
+
 
 router = APIRouter()
 
 
-model = tf.keras.models.load_model("app/model/model.keras")
 
-with open("app/model/scaler.pkl", "rb") as f:
+
+
+model = tf.keras.models.load_model(MODEL_PATH)
+
+with open(SCALER_PATH, "rb") as f:
     scaler = pickle.load(f)
 
 # Load feature names from JSON
-with open("app/model/features.json", "r") as f:
+with open(FEATURES_PATH, "r") as f:
     features = json.load(f)  # should be a list of 30 feature names
 
 
