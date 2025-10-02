@@ -1,4 +1,4 @@
-# ML Deployment Example with FastAPI
+## ML Deployment Example with FastAPI
 
 This project demonstrates **how to deploy a machine learning model** using **FastAPI**.  
 The goal is to provide a simple, practical example for learning or demonstrating to future employers.
@@ -7,7 +7,7 @@ FastAPI documentation: [https://fastapi.tiangolo.com/](https://fastapi.tiangolo.
 
 ---
 
-## Features
+### Features
 
 - Load a pre-trained ML model (`model.keras`) with its scaler and feature list.
 - Provide an API endpoint to make predictions.
@@ -19,9 +19,9 @@ FastAPI documentation: [https://fastapi.tiangolo.com/](https://fastapi.tiangolo.
 
 ---
 
-## Usage
+### Usage
 
-### 1. Run locally
+#### 1. Run locally
 
 1. Create a virtual environment:
 
@@ -52,7 +52,7 @@ http://127.0.0.1:8000/docs
 
 This provides the interactive Swagger UI to test the API endpoints.
 
-### 2. Run with Docker
+#### 2. Run with Docker
 
 1. Build the Docker image
 
@@ -72,7 +72,7 @@ docker run -p 8000:8000 ml-fastapi-app
 http://127.0.0.1:8000/docs
 ```
 
-### Notes
+#### Notes
 
 The app loads the ML model, scaler, and feature list from app/model/.
 
